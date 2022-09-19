@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杜慕冉的博客 || 简简单单试一试</title>
+    <title>杜慕冉的博客 || categories</title>
     <meta name="author" content="Dwmtcat">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -150,77 +150,20 @@
 
                 <div id="main">
                      
-<link rel="stylesheet" href="/css/post-body.css">
-<div class="article">
-    <div>
-        <h1>简简单单试一试 </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/9/18
-        </span>
-
-        
-
+<div class="categories-tags">
+    
+    <div class="all-s">
         
     </div>
-
-    <div class="content" v-pre>
-        <p>我简单说两句：首先，我们要以<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=%E5%85%B5%E7%BA%BF">兵线</a>为根基，坚决落实<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=%E5%8B%A4%E7%BB%83%E4%B9%A0%E3%80%81%E8%82%AF%E7%BB%83%E4%B9%A0">勤练习、肯练习</a>的学习作风，一切以<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=%E4%B8%8A%E5%88%86">上分</a>为目的，提升自己的<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=%E5%85%B5%E7%BA%BF%E7%90%86%E8%A7%A3">兵线理解</a>.</p>
-<h1 id="第"><a href="#第" class="headerlink" title="第"></a>第</h1><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><h3 id="章"><a href="#章" class="headerlink" title="章"></a>章</h3><p>莫欺少年穷</p>
-<span id="more"></span>
-
-<p>详情请看 :<a target="_blank" rel="noopener" href="https://www.bilibili.com/">点击此处</a></p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><pre><code class="java">莫欺中年穷&quot; 不错不错&quot;
-</code></pre>
-<hr>
-<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><pre><code>莫欺老年穷
-1
-1
-1
-1
-1
-1
-</code></pre>
-<hr>
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><pre><code>死者为大
-</code></pre>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>不参考了</p>
-
+    <div id="archives">
+        
     </div>
-
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comment">
-        <div id="gitalk-container">
-        </div>
-    </div>
-    
-</div>
-
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC81NzI5My8zMzc1Nw==">
-    <script type="text/javascript">
-       (function(d, s) {
-           var j, e = d.getElementsByTagName(s)[0];
-    
-           if (typeof LivereTower === 'function') { return; }
-    
-           j = d.createElement(s);
-           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-           j.async = true;
-    
-           e.parentNode.insertBefore(j, e);
-       })(document, 'script');
+    <script>
+        new Vue({
+            el: '#archives'
+        })
     </script>
-    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-    <!-- City版安装代码已完成 -->
+</div>
                      
 <footer id="footer">
     <div class="footer-wrap">
@@ -283,21 +226,6 @@
             }
         }
     })
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: '21e481138a6a44c20ecb',
-        clientSecret: 'cdee2514ce60f0ac03d90689b2745317f78c40c3',
-        repo: 'https://github.com/Dwmtcat/blog-talk',      // The repository of store comments,
-        owner: 'Dwmtcat',
-        admin: ['Dwmtcat'],
-        language: 'zh-CN',
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: true  // Facebook-like distraction free mode
-    })
-    gitalk.render('gitalk-container')
 </script>
 
 </body>
