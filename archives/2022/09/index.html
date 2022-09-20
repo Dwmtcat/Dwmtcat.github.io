@@ -12,7 +12,7 @@
     <link rel="icon" href="/assets/main.png">
     <link rel="stylesheet" href="/css/antd.min.css">
     
-    <link rel="stylesheet" href="/css/night-theme.css">
+    <link rel="stylesheet" href="/css/full-theme.css">
     
     <script src="/js/vue.js"></script>
     <script src="/js/antd.min.js"></script>
@@ -54,35 +54,42 @@
             <span>
                 <a-icon type="home" theme="filled" />
             </span>
-            <span>home</span>
+            <span>主页</span>
         </a>
         
         <a href="/about">
             <span>
                 <a-icon type="idcard" theme="filled" />
             </span>
-            <span>about</span>
+            <span>关于</span>
         </a>
         
         <a href="/archives">
             <span>
                 <a-icon type="folder" theme="filled" />
             </span>
-            <span>archives</span>
+            <span>归档</span>
         </a>
         
         <a href="/categories">
             <span>
                 <a-icon type="book" theme="filled" />
             </span>
-            <span>categories</span>
+            <span>分类</span>
         </a>
         
         <a href="/tags">
             <span>
                 <a-icon type="tags" theme="filled" />
             </span>
-            <span>tags</span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="smile" theme="filled" />
+            </span>
+            <span>友链</span>
         </a>
         
     </div>
@@ -101,7 +108,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="home" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
                 </div>
             </a>
             
@@ -110,7 +117,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="idcard" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
                 </div>
             </a>
             
@@ -119,7 +126,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="folder" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
                 </div>
             </a>
             
@@ -128,7 +135,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="book" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
                 </div>
             </a>
             
@@ -137,7 +144,16 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="tags" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="smile" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">友链</div>
                 </div>
             </a>
             
@@ -161,6 +177,13 @@
                 </a>
                 <div class="info">
                     
+                    <span class="category">
+                        <a href="/categories/教程">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            教程
+                        </a>
+                    </span>
+                    
 
                     
                     <span class="tags">
@@ -170,8 +193,22 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/hexo" style=color:#6484be>
+                            <a href="/tags/hexo" style=color:#03a9f4>
                                 hexo
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/笔记" style=color:#00a596>
+                                笔记
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/博客的建立" style=color:#ff7d73>
+                                博客的建立
                             </a>
                         </span>
                         
@@ -191,7 +228,35 @@
                 </a>
                 <div class="info">
                     
+                    <span class="category">
+                        <a href="/categories/测试">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            测试
+                        </a>
+                    </span>
+                    
 
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/hexo" style=color:#ffa2c4>
+                                hexo
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/测试" style=color:#ffa2c4>
+                                测试
+                            </a>
+                        </span>
+                        
+                    </span>
                     
                 </div>
             </a-card>
@@ -207,11 +272,10 @@
             © 2020 - 2022 杜慕冉的博客
             <span class="footer-icon">
                 <a-icon type="flag" theme="filled" /></span>
-            @Dwmtcat
+            <a target="_blank" rel="noopener" href="https://github.com/Dwmtcat/">@Dwmtcat</a>
         </div>
         <div></div>
-        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
-                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        <!--<div>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a>
         
     </div>
 
@@ -219,6 +283,9 @@
 
 <script src="/js/highlight.min.js"></script>
 <script src="/js/particle.js"></script>
+
+<!-- & <a
+target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div> -->
                 </div>
             </div>
         </transition>
