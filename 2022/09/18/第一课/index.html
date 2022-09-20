@@ -200,19 +200,19 @@ git -v
 <p><font color=red>xxxx : 无法将“xxxx”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。所在位置 行:1 字符: 1</font></p>
 <p>这样的提示，而是出现类似于 <font color=gray>v16.17.0  8.15.0  git version 2.37.3.windows.1</font> 这样的提示，则表示前置软件已安装成功。否则就按照以上步骤安装再重启。</p>
 <h4 id="赛前准备-2-0"><a href="#赛前准备-2-0" class="headerlink" title="赛前准备 2.0"></a>赛前准备 2.0</h4><p>检查完成后就可以输入以下命令来安装淘宝的 <font color=bule>cnpm</font> 管理器</p>
-<pre><code class="bash">npm install -g cnpm --registry=http://registry.npm.taobao.org
+<pre><code>npm install -g cnpm --registry=http://registry.npm.taobao.org
 </code></pre>
 <p>同样的可以使用以下命令来检查版本和安装情况</p>
-<pre><code class="bash">cnpm -v
+<pre><code>cnpm -v
 </code></pre>
 <p>随后还需要使用以下命令安装 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a> 框架</p>
-<pre><code class="bash">cnpm install -g hexo-cli
+<pre><code>cnpm install -g hexo-cli
 </code></pre>
 <p>同样</p>
 <pre><code class="bash">hexo -v
 </code></pre>
 <p>在终端里进入你喜欢的一个文件夹 输入以下命令创建并进入此文件夹</p>
-<pre><code class="bash">mkdir blog
+<pre><code>mkdir blog
 cd blog
 </code></pre>
 <p>其中blog可以换成任意你喜欢的文件夹名称，文件夹只是将整个工程划分一个场地装起来而已。</p>
@@ -226,7 +226,7 @@ cd blog
 <pre><code class="bash">hexo s
 </code></pre>
 <p>完成后会出现如下提示，且此时终端并不可以键入命令。</p>
-<pre><code class="bash">INFO  Validating config
+<pre><code>INFO  Validating config
 INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 </code></pre>
@@ -240,7 +240,7 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 <p>这段命令的作用是创建一个新的博文，其中“我的第一篇博客文章”为博文文件名，可以随意更改。</p>
 <p>你所创建的所有博文都储存在 <font color=bule>&#x2F;Blog&#x2F;source&#x2F;_posts</font> 中。</p>
 <p>你可以用终端进入这个文件夹，然后输入</p>
-<pre><code class="bash">notepad 我的第一篇博客文章.md
+<pre><code>notepad 我的第一篇博客文章.md
 </code></pre>
 <p>来使用记事本打开博文文件，或者直接在文件管理器中打开博文文件，VSCode也可以直接打开文件。</p>
 <p>博文的编辑遵从 <a target="_blank" rel="noopener" href="https://markdown.com.cn/">markdown</a> 语言，方便快捷，这里不多做赘述。</p>
@@ -258,7 +258,7 @@ hexo g
 <p><font color=blue>Repository name</font> 这一栏填写 “xxxxxxxx.github.io” ”xxxxxxxx“写自己的Github的名字，例如我的 “Dwmtcat.github.io“</p>
 <p>下面的Description（说明）可填可不填，然后点击Create repository创建仓库</p>
 <p>然后回到终端里,用以下指令在blog目录下安装git部署插件.</p>
-<pre><code class="bash">cnpm install --save hexo-deployer-git
+<pre><code>cnpm install --save hexo-deployer-git
 </code></pre>
 <p>如果没有红字的 <font color=red>Error</font> 只有黄字或者红字的 <font color=yellow>Worning</font> 则并无大碍</p>
 <p>然后打开根目录里的 _config.yml 文件 可以用notepad打开 命令与上文一致</p>
