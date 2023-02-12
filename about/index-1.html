@@ -1,267 +1,201 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN ">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杜慕冉之坟 || about</title>
-    <meta name="author" content="Dwmtcat">
-    <meta name="description" content=" ">
-    <meta name="keywords" content=" ">
-    <link rel="icon" href="/assets/main.png">
-    <link rel="stylesheet" href="/css/antd.min.css">
-    
-    <link rel="stylesheet" href="/css/full-theme.css">
-    
-    <script src="/js/vue.js"></script>
-    <script src="/js/antd.min.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-
-    <div id="loading"
-        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
-        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div
-            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
-            <div id="loadcontent"
-                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
-                <div>
-                    <h2>LOADING...</h2>
-                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
-                    <div>
-                        <img src="/dancingkitty.gif" alt="loading">
-                    </div>
-                </div>
-            </div>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>about | 杜慕冉之坟</title>
+        <meta name="author" content="Dwmtcat">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <link rel="icon" href="/assets/main.png">
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+        <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css">
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        
+        
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="loading" style="height: 100vh; width: 100vw; left: 0; top: 0; position: fixed; display: flex; z-index: 2147483647; background: #fff; transition: opacity 0.3s ease-out; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none">
+    <div style="width: 50vmin; height: 50vmin; margin: auto; padding: 50px; border-radius: 50%; display: flex; border: solid 10px #a3ddfb">
+        <div style="margin: auto; text-align: center">
+            <h2>LOADING</h2>
+            <p>加载过慢请开启缓存，浏览器默认开启</p>
+            <img src="/images/loading.gif" style="height: 50px; border-radius: 0">
         </div>
     </div>
+</div>
 
-    <div id="layout">
-        <transition name="into">
-            <div v-show="show_page" style="display: none;">
-                <div id="menu_show">
-                     
-<nav id="menu">
+        <div id="layout">
+            <transition name="into">
+            <div id="main" v-show="showpage" style="display: -not-none">
+                <nav id="menu">
     <div class="desktop-menu">
-        <a href="/">
-            <span class="title">杜慕冉之坟</span>
+        <a class="title" href="/">
+            <span>杜慕冉之坟</span>
         </a>
         
         <a href="/">
-            <span>
-                <a-icon type="home" theme="filled" />
-            </span>
-            <span>主页</span>
+            <i class="fa-solid fa-home fa-fw"></i>
+            <span>&ensp;主页</span>
         </a>
         
         <a href="/about">
-            <span>
-                <a-icon type="idcard" theme="filled" />
-            </span>
-            <span>关于</span>
+            <i class="fa-solid fa-circle fa-fw"></i>
+            <span>&ensp;关于</span>
         </a>
         
         <a href="/archives">
-            <span>
-                <a-icon type="folder" theme="filled" />
-            </span>
-            <span>归档</span>
+            <i class="fa-solid fa-folder fa-fw"></i>
+            <span>&ensp;归档</span>
         </a>
         
         <a href="/categories">
-            <span>
-                <a-icon type="book" theme="filled" />
-            </span>
-            <span>分类</span>
+            <i class="fa-solid fa-book fa-fw"></i>
+            <span>&ensp;分类</span>
         </a>
         
         <a href="/tags">
-            <span>
-                <a-icon type="tags" theme="filled" />
-            </span>
-            <span>标签</span>
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
         </a>
         
         <a href="/friends">
-            <span>
-                <a-icon type="smile" theme="filled" />
-            </span>
-            <span>友链</span>
+            <i class="fa-solid fa-smile fa-fw"></i>
+            <span>&ensp;友链</span>
         </a>
         
     </div>
-
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div :class="'title'" @click="menu_show=!menu_show">
-            <span style="margin-right: 10px;">
-                <a-icon type="appstore" theme="filled" />
-            </span>
-            <span>杜慕冉之坟</span>
+    <div :class="&quot;phone-menu &quot; + menushow" id="phone-menu">
+        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
+        <div class="title" @click="menushow = !menushow">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;杜慕冉之坟</span>
         </div>
-        <div class="items" v-show="menu_show">
+        <transition name="slide">
+        <div class="items" v-show="menushow">
             
             <a href="/">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="home" theme="filled" />
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-home fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
                 </div>
             </a>
             
             <a href="/about">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="idcard" theme="filled" />
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-circle fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
                 </div>
             </a>
             
             <a href="/archives">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="folder" theme="filled" />
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-folder fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
                 </div>
             </a>
             
             <a href="/categories">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="book" theme="filled" />
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-book fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
                 </div>
             </a>
             
             <a href="/tags">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="tags" theme="filled" />
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
                 </div>
             </a>
             
             <a href="/friends">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="smile" theme="filled" />
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-smile fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">友链</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">友链</div>
                 </div>
             </a>
             
         </div>
-        <div class="curtain" v-show="menu_show"></div>
+        </transition>
     </div>
-
 </nav>
-                </div>
 
-                <div id="main">
-                     
-<link rel="stylesheet" href="/css/post-body.css">
-<div class="article">
+                <div class="article">
     <div>
         <h1>about </h1>
     </div>
     <div class="info">
-       <!-- <span class="date">
+        <span class="date">
             <span class="icon">
-                <a-icon type="calendar" theme="filled" />
+                <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
             2022/9/19
-        </span> -->
-
+        </span>
         
-
         
     </div>
-
+    
     <div class="content" v-pre>
         
     </div>
-
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comment">
-        <div id="gitalk-container">
-        </div>
-    </div>
+    
+    
+    
+    
+    
     
 </div>
-                     
-<footer id="footer">
+
+                <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2020 - 2022 杜慕冉之坟
+            &copy;
+            2022 - 2023 杜慕冉之坟
             <span class="footer-icon">
-                <a-icon type="flag" theme="filled" /></span>
-            <a target="_blank" rel="noopener" href="https://github.com/Dwmtcat/">@Dwmtcat</a>
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Dwmtcat
         </div>
-        <div></div>
-        <!--<div>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a></div>
         
     </div>
-
 </footer>
 
-<script src="/js/highlight.min.js"></script>
-<script src="/js/particle.js"></script>
-
-<!-- & <a
-target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div> -->
-                </div>
             </div>
-        </transition>
-    </div>
+            </transition>
+            <div id="showimg">
+                <img id="showimg-content">
+            </div>
+        </div>
+        <script src="/js/functions.js"></script>
+<script src="/js/particlex.js"></script>
 
-    <script>
-    new Vue({
-        el: "#layout",
-        data: {
-            show_page: false,
-            onload_menu: false,
-            menu_show: false,
-            card_top: 100
-        },
-        created: function () {
-            var that = this
-            window.onload = function () {
-                that.show_page = true
-                document.getElementById("loadcontent").style.opacity = 0
-                setTimeout(function () {
-                    document.getElementById("loadleft").style.width = 0
-                    document.getElementById("loadright").style.width = 0
-                }, 300)
-                setTimeout(function () {
-                    document.getElementById("loading").style = "display:none"
-                }, 600)
-            }
-        },
-        mounted: function () {
-            var that = this
-            window.addEventListener('scroll', function (e) {
-                that.menu_show = false
-            })
-        },
-        methods: {
-            home_click: function () {
-                window.scrollTo({
-                    top: window.innerHeight - 80,
-                    behavior: "smooth",
-                });
-            }
-        }
-    })
-</script>
 
-</body>
 
+
+
+
+
+    </body>
 </html>
